@@ -16,6 +16,7 @@ import { patchProfileData } from '../../model/services/patchProfileData/patchPro
 import { ProfileType } from '../../model/types/ProfileStateSchema'
 
 import s from './ProfileForm.module.scss'
+import { getUserId } from 'Entities/User'
 
 const initialReducers: ReducersList = {
   profileFormSchema: ProfileFormReducer
@@ -23,9 +24,11 @@ const initialReducers: ReducersList = {
 
 const ProfileForm: FC = () => {
   const { t } = useTranslation('profileForm')
+
   const dispatch = useAppDispatch()
   const isReadOnly = !useSelector(getProfileIsEdit)
   const profileData = useSelector(getProfileData)
+  const userId = useSelector(getUserId)
 
   const methods = useForm({
     mode: 'onChange',
@@ -34,7 +37,7 @@ const ProfileForm: FC = () => {
   const { handleSubmit, reset } = methods
 
   useEffect(() => {
-    dispatch(fetchProfileData())
+    dispatch(fetchProfileData(userId))
   }, [dispatch])
 
   useEffect(() => {
@@ -46,7 +49,7 @@ const ProfileForm: FC = () => {
   }
 
   const handleOnSave = (data: ProfileType) => {
-    dispatch(patchProfileData(data))
+    dispatch(patchProfileData({ profileId: profileData.id, data }))
   }
 
   return (

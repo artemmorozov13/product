@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu'
 
 import { AuthorizationModal, RegistrationModal } from 'Features'
-import { Autocomplete, Button, Container, Logotype, ToggleLanguegeButton, ToggleThemeButton, useAppDispatch, useTypedTranslation } from 'Shared'
+import { Button, Container, ToggleLanguegeButton, ToggleThemeButton, useAppDispatch, useTypedTranslation } from 'Shared'
 
 import { UserActions } from 'Entities/User'
 import { useAuth } from 'Shared/lib/hooks/useAuth'
+import { RoutesPath } from 'Shared/config/RouterConfig/AppRoutes'
 
 import s from './Header.module.scss'
 
@@ -24,8 +25,8 @@ export const Header: FC = () => {
             <MenuIcon className={s.menuIcon} />
             <Container className={s.container}>
                 <div className={s.links}>
-                    <Link className={s.link} to={'/'}>
-                        <Logotype className={s.logotype} />
+                    <Link className={s.link} to={RoutesPath.main}>
+                        Dashboard
                     </Link>
                 </div>
                 <div className={s.controls}>
@@ -45,14 +46,11 @@ export const Header: FC = () => {
           <header className={s.header}>
               <Container className={s.container}>
                   <div className={s.links}>
-                      <Link className={s.link} to={'/'}>
-                          <Logotype className={s.logotype} />
+                      <Link className={s.link} to={RoutesPath.main}>
+                          Dashboard
                       </Link>
                       <span className={s.link} onClick={() => setOpenLoginModal(true)}>{t('widget_header_login_modal')}</span>
                       <span className={s.link} onClick={() => setOpenSignUpModal(true)}>{t('widget_header_signup_modal')}</span>
-                  </div>
-                  <div className={s.search}>
-                      <Autocomplete placeholder={t('widget_header_search_placeholder')} />
                   </div>
                   <div className={s.controls}>
                       <ToggleLanguegeButton>{t('widget_header_languege_switcher')}</ToggleLanguegeButton>

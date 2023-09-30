@@ -1,25 +1,36 @@
 {
   "users": [
     {
-      "email": "test123@mail.ru",
-      "password": "$2a$10$ohY1jNsGjVOgPbR6S2rLQOyZXVdsj7MKPsYlhK/ja/AXjrtoHMyFe",
-      "id": 1
-    },
-    {
-      "email": "olivier@mail.com",
-      "password": "$2a$10$0YXmJheV5jK9J32uGrf7q.l86nyNhZ7ai/D/ZCVC4P5a61xcEMbHi",
-      "id": 2
-    },
-    {
-      "email": "novichok@mail.ru",
-      "password": "$2a$10$1nvnuG1wO.yL9zlC6OxGSO.7A2b9fv04fcBHPPCY/s3jt.qYfebM6",
-      "id": 3
+      "email": "said@mail.ru",
+      "password": "$2a$10$h/qJ00jLUhLYX3kMn.0DnuGvBNg6//3nZ1DC59dhckLhh4/Dq2zLG",
+      "username": "Said",
+      "fullname": "Ragimhanov",
+      "confirmPassword": "12345678",
+      "id": 4
     }
   ],
-  "profile": {
-    "email": "artemmorozov1308@gmail.com",
-    "name": "Artem",
-    "lastName": "Morozov 123",
-    "firstName": "Artem"
-  }
+  "profiles": [
+    {
+      "id": 1,
+      "userId": 4,
+      "email": "said@mail.ru",
+      "name": "Said Ragimhanov",
+      "lastName": "Lion",
+      "firstName": "Said"
+    }
+  ],
+  "timeintervals": [
+    {
+      "id": 1,
+      "userId": 4,
+      "start": "11.11.2023 15:30:00",
+      "end": "11.11.2023 17:30:00"
+    },
+    {
+      "id": 2,
+      "userId": 4,
+      "start": "12.11.2023 15:30:00",
+      "end": "12.11.2023 16:30:00"
+    }
+  ]
 }

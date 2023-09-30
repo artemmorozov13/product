@@ -2,6 +2,7 @@
     "compilerOptions": {
       "outDir": "./dist/",
       "baseUrl": ".",
+      "strict": false,
       "paths": {
         "*": ["./src/*"]
       },

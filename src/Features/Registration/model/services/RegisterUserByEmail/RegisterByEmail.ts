@@ -24,8 +24,7 @@ export const RegisterByEmail = createAsyncThunk<IRegisterUserSchema, IRegisterPr
     const { rejectWithValue, extra } = thunkApi
 
     try {
-      console.log(authData)
-      const response = await extra.api.post<IRegisterUserSchema>('/auth/register', authData)
+      const response = await extra.api.post<IRegisterUserSchema>('/users/register', authData)
       if (!response.data) {
         throw new Error('Something went wrong')
       }
