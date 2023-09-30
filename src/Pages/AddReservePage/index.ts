@@ -1,1 +1,1 @@
-export { AddReservePageAsync as AddReservePage } from "./AddReservePageAsync";
+export { AddReservePageAsync as AddReservePage } from './AddReservePageAsync'

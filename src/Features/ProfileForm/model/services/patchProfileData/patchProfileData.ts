@@ -3,7 +3,7 @@ import { ThunkApiType } from 'App/providers/StoreProvider/config/StateSchema'
 
 import { ProfileType } from '../../types/ProfileStateSchema'
 
-const errorMessage = ""
+const errorMessage = ''
 
 interface ProfileOptions {
   profileId: number

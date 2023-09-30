@@ -2,8 +2,8 @@ import i18next from 'i18next'
 import { RoutesPath } from 'Shared/config/RouterConfig/AppRoutes'
 import HomeIcon from '@mui/icons-material/Home'
 import PersonIcon from '@mui/icons-material/Person'
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
+import DashboardIcon from '@mui/icons-material/Dashboard'
+import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd'
 import { ReactNode } from 'react'
 
 interface ISidebarNavigationItemSchema {

@@ -1,7 +1,7 @@
-import { EntityState } from "@reduxjs/toolkit";
-import { TimeReservationType } from "./timeReservationTypes";
+import { EntityState } from '@reduxjs/toolkit'
+import { TimeReservationType } from './timeReservationTypes'
 
 export interface AddReservationStateSchema extends EntityState<TimeReservationType> {
-    isLoading: boolean
-    error: string | null
+  isLoading: boolean
+  error: string | null
 }

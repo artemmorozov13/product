@@ -1,3 +1,3 @@
-import { lazy } from "react";
+import { lazy } from 'react'
 
-export const AddReservationFormLazy = lazy(() => import("./AddReservationForm"))
+export const AddReservationFormLazy = lazy(() => import('./AddReservationForm'))

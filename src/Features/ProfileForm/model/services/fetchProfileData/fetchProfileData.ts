@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 import { ProfileType } from '../../types/ProfileStateSchema'
 import { ThunkApiType } from 'App/providers/StoreProvider/config/StateSchema'
 
-const errorMessage = ""
+const errorMessage = ''
 
 export const fetchProfileData = createAsyncThunk<ProfileType, number, ThunkApiType<string>>(
   'profile/fetchProfileData',
@@ -15,7 +15,7 @@ export const fetchProfileData = createAsyncThunk<ProfileType, number, ThunkApiTy
       if (!response.data) {
         rejectWithValue(errorMessage)
       }
-      
+
       return response.data[0]
     } catch {
       return rejectWithValue(errorMessage)
