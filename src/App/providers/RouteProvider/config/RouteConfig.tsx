@@ -1,4 +1,6 @@
-import { HomePage, NotFoundPage, ProductPage } from 'Pages'
+import { HomePage, NotFoundPage } from 'Pages'
+import { AddReservePage } from 'Pages/AddReservePage'
+import { BoardPage } from 'Pages/BoardPage'
 import { ProfilePage } from 'Pages/ProfilePage'
 
 import { AppRoutes, AppRoutesWithAuthProps, RoutesPath } from 'Shared/config/RouterConfig/AppRoutes'
@@ -13,9 +15,15 @@ export const routeConfig: Record<AppRoutes, AppRoutesWithAuthProps> = {
     element: <ProfilePage />,
     authOnly: true
   },
-  [AppRoutes.PRODUCT]: {
-    path: RoutesPath.product,
-    element: <ProductPage />
+  [AppRoutes.BOARD]: {
+    path: RoutesPath.board,
+    element: <BoardPage />,
+    authOnly: true
+  },
+  [AppRoutes.ADD_RESERVE]: {
+    path: RoutesPath.addReserve,
+    element: <AddReservePage />,
+    authOnly: true
   },
   // 404
   [AppRoutes.NOT_FOUND]: {

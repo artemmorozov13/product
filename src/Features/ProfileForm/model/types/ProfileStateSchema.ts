@@ -6,6 +6,8 @@ export interface ProfileStateSchema {
 }
 
 export interface ProfileType {
+  id: number
+  userId: number
   email: string | undefined
   firstName: string | undefined
   lastName: string | undefined

@@ -7,7 +7,8 @@ export type AppRoutesWithAuthProps = RouteProps & {
 export enum AppRoutes {
   MAIN = 'main',
   PROFILE = 'profile',
-  PRODUCT = 'product',
+  BOARD = 'board',
+  ADD_RESERVE = 'addReserve',
 
   // 404
   NOT_FOUND = 'not_found',
@@ -15,7 +16,8 @@ export enum AppRoutes {
 
 export const RoutesPath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: '/',
-  [AppRoutes.PRODUCT]: '/product',
   [AppRoutes.PROFILE]: '/profile',
+  [AppRoutes.BOARD]: '/board',
+  [AppRoutes.ADD_RESERVE]: '/reserve',
   [AppRoutes.NOT_FOUND]: '*'
 }

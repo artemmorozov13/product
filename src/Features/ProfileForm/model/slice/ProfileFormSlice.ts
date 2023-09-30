@@ -1,7 +1,7 @@
 import { fetchProfileData } from './../services/fetchProfileData/fetchProfileData'
-import { createSlice } from '@reduxjs/toolkit'
+import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-import { ProfileStateSchema } from '../types/ProfileStateSchema'
+import { ProfileStateSchema, ProfileType } from '../types/ProfileStateSchema'
 import { patchProfileData } from '../services/patchProfileData/patchProfileData'
 
 const initialState: ProfileStateSchema = {
@@ -25,7 +25,7 @@ export const ProfileFormSlice = createSlice({
         state.isLoading = true
         state.error = null
       })
-      .addCase(fetchProfileData.fulfilled, (state, action) => {
+      .addCase(fetchProfileData.fulfilled, (state, action: PayloadAction<ProfileType>) => {
         state.isLoading = false
         state.data = action.payload
       })

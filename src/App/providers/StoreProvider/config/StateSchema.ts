@@ -8,6 +8,7 @@ import { ProfileStateSchema } from 'Features/ProfileForm/model/types/ProfileStat
 import { LoginSchema } from 'Features/AuthByEmail'
 import { RegisterUserSchema } from 'Features/Registration'
 import { createReduxStore } from './store'
+import { AddReservationStateSchema } from 'Features/AddReservationForm'
 
 export interface StateSchema {
   counter: CounterSchema
@@ -17,6 +18,7 @@ export interface StateSchema {
   loginStateSchema?: LoginSchema
   registerUserSchema?: RegisterUserSchema
   profileFormSchema?: ProfileStateSchema
+  addReservationSchema?: AddReservationStateSchema
 }
 
 export type StateSchemaKeys = keyof StateSchema

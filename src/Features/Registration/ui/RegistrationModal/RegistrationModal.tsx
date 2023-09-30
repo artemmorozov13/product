@@ -15,7 +15,7 @@ const RegistrationModal: FC<IRegistrationModal> = (props) => {
   return (
       <Modal open={open} onClose={onClose} lazy>
           <Suspense fallback={<Loader className={s.loader}/>}>
-              <RegistrationForm/>
+              <RegistrationForm onClose={onClose} />
           </Suspense>
       </Modal>
   )

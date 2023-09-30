@@ -23,7 +23,13 @@ import s from './RegistrationForm.module.scss'
 
 const initialReducers: ReducersList = { registerUserSchema: CreateUserReducer }
 
-const RegistrationForm = memo(() => {
+interface RegistrationFormProps {
+  onClose: () => void
+}
+
+const RegistrationForm = memo((props: RegistrationFormProps) => {
+  const { onClose } = props
+
   const dispatch = useAppDispatch()
   const { t } = useTypedTranslation("registration")
   const { control, formState: { errors }, handleSubmit } = useForm({
@@ -40,6 +46,7 @@ const RegistrationForm = memo(() => {
 
   const handleRegister = useCallback((data: IRegisterUserSchema) => {
     dispatch(RegisterByEmail(data))
+    onClose()
   }, [dispatch])
 
   return (
