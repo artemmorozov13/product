@@ -17,7 +17,7 @@ interface IDynamicModuleLoader {
 type ReducerListEntry = [StateSchemaKeys, Reducer]
 
 export const DynamicModuleLoader: FC<IDynamicModuleLoader> = (props) => {
-  const { reducers, children, removeAfterUnmount = true } = props
+  const { reducers, children, removeAfterUnmount = false } = props
   const store = useStore() as ReduxStoreWithManager
 
   useEffect(() => {

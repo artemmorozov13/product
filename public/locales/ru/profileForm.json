@@ -1,8 +1,15 @@
 {
   "fields": {
-    "emailPlaceholder": "Email",
-    "firstNamePlaceholder": "Имя",
-    "lastNamePlaceholder": "Фамилия"
+    "usernamePlaceholder": "Введите имя пользователя",
+    "usernameLabel": "Имя пользователя",
+    "emailPlaceholder": "Введите Email",
+    "emailLabel": "Email адрес",
+    "firstNamePlaceholder": "Введите ваше имя",
+    "firstNameLabel": "Имя",
+    "lastNamePlaceholder": "Введите вашу вамилию",
+    "lastNameLabel": "Фамилия",
+    "avatarPlaceholder": "Введите ссылку на аватар",
+    "avatarLabel": "Фото профиля"
   },
   "buttonEdit": "Редактировать",
   "buttonSave": "Сохранить"

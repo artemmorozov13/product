@@ -10,13 +10,12 @@ import { DynamicModuleLoader } from 'Shared/lib/components/DynamicModuleLoader'
 import { ReducersList } from 'Shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { ProfileFormActions, ProfileFormReducer } from '../../model/slice/ProfileFormSlice'
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData'
-import { getProfileData } from '../../model/selectors/getProfileData/getProfileData'
-import { getProfileIsEdit } from '../../model/selectors/getProfileMode/getProfileIsEdit'
 import { patchProfileData } from '../../model/services/patchProfileData/patchProfileData'
 import { ProfileType } from '../../model/types/ProfileStateSchema'
 
 import s from './ProfileForm.module.scss'
 import { getUserId } from 'Entities/User'
+import { getProfileAvatar, getProfileData, getProfileIsEdit } from '../../model/selectors/profileSelectors'
 
 const initialReducers: ReducersList = {
   profileFormSchema: ProfileFormReducer
@@ -28,6 +27,7 @@ const ProfileForm: FC = () => {
   const dispatch = useAppDispatch()
   const isReadOnly = !useSelector(getProfileIsEdit)
   const profileData = useSelector(getProfileData)
+  const profileAvatar = useSelector(getProfileAvatar)
   const userId = useSelector(getUserId)
 
   const methods = useForm({
@@ -56,26 +56,43 @@ const ProfileForm: FC = () => {
       <DynamicModuleLoader reducers={initialReducers}>
           <div className={s.form}>
               <FormProvider {...methods}>
-                  <Avatar />
+                  <Avatar src={profileAvatar} />
                   <div className={s.wrapper}>
                       <div className={s.fields}>
+                          <TextField
+                              name='username'
+                              placeholder={t('fields.usernamePlaceholder')}
+                              className={s.field}
+                              disabled={isReadOnly}
+                              label={t('fields.usernameLabel')}
+                        />
                           <TextField
                               name='email'
                               placeholder={t('fields.emailPlaceholder')}
                               className={s.field}
                               disabled={isReadOnly}
+                              label={t('fields.emailLabel')}
                         />
                           <TextField
                               name='firstName'
                               placeholder={t('fields.firstNamePlaceholder')}
                               className={s.field}
                               disabled={isReadOnly}
+                              label={t('fields.firstNameLabel')}
                             />
                           <TextField
                               name='lastName'
                               placeholder={t('fields.lastNamePlaceholder')}
                               className={s.field}
                               disabled={isReadOnly}
+                              label={t('fields.lastNameLabel')}
+                            />
+                          <TextField
+                              name='avatar'
+                              placeholder={t('fields.avatarPlaceholder')}
+                              className={s.field}
+                              disabled={isReadOnly}
+                              label={t('fields.avatarLabel')}
                             />
                       </div>
                       <div className={s.actions}>
