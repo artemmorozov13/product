@@ -1,0 +1,136 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add @types/react-hook-form
+
+PATH: 
+  /opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/homebrew/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.17.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@types%2freact-hook-form: Not found
+      at params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66145:18)
+      at self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:514:28)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:514:28)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:628:28)
+      at IncomingMessage.emit (node:events:526:35)
+      at endReadableNT (node:internal/streams/readable:1359:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+npm manifest: 
+  {
+    "name": "project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "webpack serve --env port=3000",
+      "dev": "concurrently \"npm run start\" \"npm run server\"",
+      "server": "json-server json-server/db.json -m ./node_modules/json-server-auth --port 5000",
+      "build:prod": "webpack --env mode=production",
+      "build:dev": "webpack --env mode=development",
+      "lint:ts": "eslint \"**/*.{ts,tsx}\"",
+      "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
+      "lint:scss": "npx stylelint \"**/*.scss\"",
+      "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
+      "test": "jest --config ./config/jest/jest.config.ts",
+      "storybook": "start-storybook -p 6006 -c ./config/storybook",
+      "build-storybook": "build-storybook ./config/storybook",
+      "prepare": "husky install"
+    },
+    "keywords": [],
+    "author": "Artem Morozov",
+    "license": "ISC",
+    "devDependencies": {
+      "@babel/core": "^7.20.2",
+      "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
+      "@storybook/addon-actions": "^6.5.13",
+      "@storybook/addon-essentials": "^7.0.11",
+      "@storybook/addon-interactions": "^6.5.13",
+      "@storybook/addon-links": "^6.5.13",
+      "@storybook/builder-webpack5": "^6.5.13",
+      "@storybook/manager-webpack5": "^6.5.13",
+      "@storybook/react": "^7.0.11",
+      "@storybook/testing-library": "^0.0.13",
+      "@svgr/webpack": "^6.3.1",
+      "@types/jest": "^29.2.6",
+      "@types/node": "^18.7.16",
+      "@types/react": "^18.0.19",
+      "@types/react-dom": "^18.0.6",
+      "@types/webpack": "^5.28.0",
+      "@types/webpack-bundle-analyzer": "^4.6.0",
+      "@types/webpack-dev-server": "^4.7.2",
+      "@typescript-eslint/eslint-plugin": "^5.38.1",
+      "babel-loader": "^8.3.0",
+      "css-loader": "^6.7.1",
+      "eslint": "^8.24.0",
+      "eslint-config-standard-with-typescript": "^23.0.0",
+      "eslint-plugin-import": "^2.26.0",
+      "eslint-plugin-n": "^15.3.0",
+      "eslint-plugin-promise": "^6.0.1",
+      "eslint-plugin-react": "^7.31.8",
+      "eslint-plugin-react-hooks": "^4.6.0",
+      "file-loader": "^6.2.0",
+      "html-webpack-plugin": "^5.5.0",
+      "husky": "^8.0.0",
+      "jest": "^29.3.1",
+      "jest-environment-jsdom": "^29.3.1",
+      "json-server": "^0.17.1",
+      "json-server-auth": "^2.1.0",
+      "mini-css-extract-plugin": "^2.6.1",
+      "react-refresh": "^0.14.0",
+      "react-refresh-typescript": "^2.0.7",
+      "sass": "^1.54.9",
+      "sass-loader": "^13.0.2",
+      "style-loader": "^3.3.1",
+      "stylelint": "^14.13.0",
+      "stylelint-config-standard-scss": "^5.0.0",
+      "ts-jest": "^29.0.5",
+      "ts-loader": "^9.3.1",
+      "ts-node": "^10.9.1",
+      "typescript": "^4.8.4",
+      "webpack": "^5.74.0",
+      "webpack-bundle-analyzer": "^4.6.1",
+      "webpack-cli": "^4.10.0",
+      "webpack-dev-server": "^4.11.0"
+    },
+    "dependencies": {
+      "@emotion/react": "^11.10.4",
+      "@emotion/styled": "^11.10.4",
+      "@hookform/resolvers": "^3.2.0",
+      "@mui/icons-material": "^5.11.11",
+      "@mui/material": "^5.10.8",
+      "@mui/styled-engine-sc": "^5.10.6",
+      "@reduxjs/toolkit": "^1.9.1",
+      "@types/react-router-dom": "^5.3.3",
+      "axios": "^1.3.3",
+      "classnames": "^2.3.2",
+      "concurrently": "^8.0.1",
+      "i18next": "^21.9.2",
+      "i18next-browser-languagedetector": "^6.1.5",
+      "i18next-http-backend": "^1.4.4",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-hook-form": "^7.43.9",
+      "react-i18next": "^11.18.6",
+      "react-redux": "^8.0.5",
+      "react-router-dom": "^6.4.0",
+      "styled-components": "^5.3.6",
+      "yup": "^1.2.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

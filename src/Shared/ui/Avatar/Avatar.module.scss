@@ -8,4 +8,14 @@
     border: 8px solid var(--accent);
     border-radius: 100%;
     color: var(--primary);
+
+    &__image {
+        display: block;
+        border-radius: 100%;
+    }
+
+    &__userSymbol {
+        text-transform: uppercase;
+        font-size: var(--fs-huge);
+    }
 }

@@ -21,7 +21,7 @@ const Layout: FC<ILayout> = ({ children }) => {
               {isAuth && <Sidebar />}
               <main className={s.main}>{children}</main>
           </div>
-          <Footer />
+          {/* <Footer /> */}
       </div>
   )
 }

@@ -5,9 +5,9 @@ import s from './TextInput.module.scss'
 
 interface ITextInput extends Omit<HTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'placeholder'> {
   value: string
-  onChange: (value: string) => void
+  onChange: (value: string, e?: ChangeEvent<HTMLInputElement>) => void
   placeholder?: string
-  type?: 'text' | 'password' | 'email'
+  type?: 'text' | 'password' | 'email' | 'date' | 'time'
 }
 
 export const TextInput = memo((props: ITextInput) => {
@@ -21,7 +21,7 @@ export const TextInput = memo((props: ITextInput) => {
   } = props
 
   const changeEventHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    onChange?.(e.target.value)
+    onChange?.(e.target.value, e)
   }
 
   return (

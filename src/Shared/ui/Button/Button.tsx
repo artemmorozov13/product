@@ -3,7 +3,7 @@ import cn from 'classnames'
 
 import s from './Button.module.scss'
 
-enum ButtonTypeEnum {
+export enum ButtonTypeEnum {
   Primary = 'primary',
   Secondary = 'secondary',
 }

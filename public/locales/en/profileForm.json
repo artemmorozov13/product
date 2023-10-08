@@ -1,8 +1,15 @@
 {
     "fields": {
+        "usernamePlaceholder": "Username",
+        "usernameLabel": "Username",
         "emailPlaceholder": "Email",
+        "emailLabel": "Email",
         "firstNamePlaceholder": "Name",
-        "lastNamePlaceholder": "Last name"
+        "firstNameLabel": "Your name",
+        "lastNamePlaceholder": "Last name",
+        "lastNameLabel": "Your last name",
+        "avatarPlaceholder": "Avatar link",
+        "avatarLabel": "Input link path to avatar"
     },
     "buttonEdit": "Edit"
 }

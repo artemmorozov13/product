@@ -8,7 +8,9 @@ export interface ProfileStateSchema {
 export interface ProfileType {
   id: number
   userId: number
+  username: string | undefined
   email: string | undefined
   firstName: string | undefined
   lastName: string | undefined
+  avatar: string | undefined
 }
