@@ -1,2 +1,2 @@
 export { AddTimeIntervalLazy as AddTimeInterval } from './ui/AddTimeIntervalLazy'
-export { TimeIntervalsStateSchema } from './types/timeIntervalsSchema'
+export { TimeIntervalsStateSchema, TimeIntervalsType } from './types/timeIntervalsSchema'

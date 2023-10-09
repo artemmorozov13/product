@@ -9,6 +9,8 @@ import { LoginSchema } from 'Features/AuthByEmail'
 import { RegisterUserSchema } from 'Features/Registration'
 import { createReduxStore } from './store'
 import { TimeIntervalsStateSchema } from 'Features/AddTimeInterval'
+import { ManagerBoardStateSchema } from 'Widgets/ManagerBoard'
+import { SharedBoardStateSchema } from 'Widgets/SharedBoard'
 
 export interface StateSchema {
   counter: CounterSchema
@@ -19,6 +21,8 @@ export interface StateSchema {
   registerUserSchema?: RegisterUserSchema
   profileFormSchema?: ProfileStateSchema
   timeIntervalsSchema?: TimeIntervalsStateSchema
+  managerBoardSchema?: ManagerBoardStateSchema
+  sharedBoardSchema?: SharedBoardStateSchema
 }
 
 export type StateSchemaKeys = keyof StateSchema

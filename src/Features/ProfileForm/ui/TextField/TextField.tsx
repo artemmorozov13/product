@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next'
 import { TextInput } from 'Shared'
 
 import s from './TextField.module.scss'
-import { Text } from 'Shared/ui/Text'
 
 interface ITextField {
   name: string

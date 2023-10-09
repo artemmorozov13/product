@@ -10,6 +10,8 @@ export interface TimeIntervalsType {
   id: string
   start: string
   end: string
+  isAvailable: boolean
+  reserverPhone?: string | null
 }
 
 export interface TimeIntervalsFormSchema {

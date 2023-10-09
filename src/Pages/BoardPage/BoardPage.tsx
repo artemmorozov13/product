@@ -1,10 +1,11 @@
-import { Layout } from 'Widgets'
 import { FC } from 'react'
+import { Layout } from 'Widgets'
+import { ManagerBoard } from 'Widgets/ManagerBoard'
 
 const BoardPage: FC = () => {
   return (
       <Layout>
-          BoardPage
+          <ManagerBoard />
       </Layout>
   )
 }

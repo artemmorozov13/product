@@ -1,0 +1,1 @@
+export { SharedBoardByIdPageLazy as SharedBoardByIdPage } from "./SharedBoardByIdPageLazy";
