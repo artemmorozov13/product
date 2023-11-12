@@ -12,7 +12,7 @@ export const RequireAuth = (props: IRequireAuthProps) => {
   const location = useLocation()
 
   if (!isAuth) {
-    return <Navigate to={RoutesPath.main} state={{ form: location }} replace />
+    return <Navigate to={RoutesPath.auth} state={{ form: location }} replace />
   }
 
   return children

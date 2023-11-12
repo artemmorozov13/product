@@ -1,0 +1,31 @@
+{
+    "title": "Создать аккаунт",
+    "email": {
+        "label": "E-mail адрес",
+        "placeholder": "Введите e-mail адрес"
+    },
+    "username": {
+        "label": "Логин",
+        "placeholder": "Придумайте уникальный логин"
+    },
+    "firstName": {
+        "label": "Имя",
+        "placeholder": "Введите ваше имя"
+    },
+    "lastName": {
+        "label": "Фамилия",
+        "placeholder": "Введите вашу фамилию"
+    },
+    "password": {
+        "label": "Пароль",
+        "placeholder": "Придумайте пароль"
+    },
+    "passwordRepeat": {
+        "label": "Подтверждение пароля",
+        "placeholder": "Введите пароль еще раз"
+    },
+    "remember": "Запомнить",
+    "alreadyRegister": "Уже есть аккаунт? ",
+    "login": "Войти",
+    "submit": "Создать"
+}

@@ -6,10 +6,11 @@ import { AppRoutesWithAuthProps } from 'Shared/config/RouterConfig/AppRoutes'
 
 import { routeConfig } from '../config/RouteConfig'
 import { RequireAuth } from './RequireAuth'
+import { NotAuthOnly } from './NotAuthOnly'
 
 const AppRouter: FC = () => {
   const renderWithWrapper = useCallback((route: AppRoutesWithAuthProps) => {
-    const { path, element, authOnly } = route
+    const { path, element, authOnly, notAuthOnly } = route
 
     const renderElement = (
         <Suspense fallback={<PageLoader />}>
@@ -21,7 +22,11 @@ const AppRouter: FC = () => {
         <Route
             key={path}
             path={path}
-            element={authOnly ? <RequireAuth>{renderElement}</RequireAuth> : renderElement} />
+            element={authOnly ? (
+                <RequireAuth>{renderElement}</RequireAuth>
+            ) : notAuthOnly ? (
+                <NotAuthOnly>{renderElement}</NotAuthOnly>
+            ) : renderElement} />
     )
   }, [])
 

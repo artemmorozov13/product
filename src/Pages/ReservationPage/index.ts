@@ -1,0 +1,1 @@
+import { ReservationPageLazy as ReservationPage } from "./ui/ReservationPageLazy";

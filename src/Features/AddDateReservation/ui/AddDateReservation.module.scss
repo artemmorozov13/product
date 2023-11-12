@@ -1,0 +1,59 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.title {
+    padding: 1rem;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.datePicker {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.headerDate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.timePickerWrapper {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.timePicker {
+    display: flex;
+    gap: 1rem;
+}
+
+.chips {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.chip {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.chipMessage {
+    text-align: center;
+}
+
+.saveButton {
+    padding: 1rem;
+}

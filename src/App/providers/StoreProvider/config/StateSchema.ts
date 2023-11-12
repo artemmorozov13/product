@@ -3,22 +3,18 @@ import { AxiosInstance } from 'axios'
 import { CounterSchema } from 'Entities'
 import { NavigateOptions, To } from 'react-router-dom'
 import { AnyAction, CombinedState, Reducer, ReducersMapObject } from 'redux'
-import { UserLoginStateSchema } from 'Shared/types/RegistrationAutorizationTypes'
-import { ProfileStateSchema } from 'Features/ProfileForm/model/types/ProfileStateSchema'
-import { LoginSchema } from 'Features/AuthByEmail'
-import { RegisterUserSchema } from 'Features/Registration'
 import { createReduxStore } from './store'
-import { TimeIntervalsStateSchema } from 'Features/AddTimeInterval'
+import { UserStateSchemaType } from 'Entities/User'
+import { RegisterStateSchema } from 'Features/RegistrationForm'
+import { AuthFormSchema } from 'Features/AuthForm'
 
 export interface StateSchema {
   counter: CounterSchema
-  userStateSchema: UserLoginStateSchema
+  userStateSchema: UserStateSchemaType
 
-  // Асинхронные редьюсеры
-  loginStateSchema?: LoginSchema
-  registerUserSchema?: RegisterUserSchema
-  profileFormSchema?: ProfileStateSchema
-  timeIntervalsSchema?: TimeIntervalsStateSchema
+  // async
+  registerReducer?: RegisterStateSchema
+  authReducer?: AuthFormSchema
 }
 
 export type StateSchemaKeys = keyof StateSchema

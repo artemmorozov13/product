@@ -1,10 +1,10 @@
 {
   "users": [
     {
-      "email": "said@mail.ru",
+      "email": "artem@mail.ru",
       "password": "$2a$10$h/qJ00jLUhLYX3kMn.0DnuGvBNg6//3nZ1DC59dhckLhh4/Dq2zLG",
-      "username": "Said",
-      "fullname": "Ragimhanov",
+      "username": "Artem",
+      "fullname": "Morozov",
       "confirmPassword": "12345678",
       "id": 4
     }
@@ -13,131 +13,50 @@
     {
       "id": 1,
       "userId": 4,
-      "email": "said@mail.ru",
-      "name": "Said Ragimhanov",
-      "lastName": "Lion",
-      "firstName": "Said",
+      "email": "artem@mail.ru",
+      "name": "Artem",
+      "lastName": "Morozov",
+      "firstName": "Artem",
       "avatar": "https://pyxis.nymag.com/v1/imgs/51b/28a/622789406b8850203e2637d657d5a0e0c3-avatar-rerelease.1x.rsquare.w1400.jpg",
-      "username": "said123"
+      "username": "art2000"
+    }
+  ],
+  "dates": [
+    {
+      "id": 1,
+      "userId": 4,
+      "date": "2023-10-13"
+    },
+    {
+      "id": 2,
+      "userId": 4,
+      "date": "2023-10-14"
     }
   ],
   "services": [
     {
       "id": 1,
       "userId": 4,
-      "date": "11.11.2020",
-      "intervals": [
-        {
-          "start": "15:30:00",
-          "end": "17:30:00"
-        },
-        {
-          "start": "15:30:00",
-          "end": "16:30:00"
-        }
-      ]
+      "dateId": 1,
+      "start": "22:03",
+      "end": "23:03",
+      "isAvailable": false
     },
     {
+      "id": 2,
       "userId": 4,
-      "date": "2023-10-20",
-      "intervals": [
-        {
-          "id": "1696722123104",
-          "start": "05:45",
-          "end": "06:45"
-        },
-        {
-          "id": "1696722132356",
-          "start": "07:50",
-          "end": "08:50"
-        }
-      ],
-      "id": 2
+      "dateId": 1,
+      "start": "20:00",
+      "end": "21:00",
+      "isAvailable": false
     },
     {
+      "id": 3,
       "userId": 4,
-      "date": "2023-10-20",
-      "intervals": [
-        {
-          "start": "05:45",
-          "end": "06:45"
-        },
-        {
-          "start": "08:00",
-          "end": "09:00"
-        }
-      ],
-      "id": 3
-    },
-    {
-      "userId": 4,
-      "date": "2023-10-21",
-      "intervals": [
-        {
-          "id": "1696722742986",
-          "start": "05:56",
-          "end": "07:58"
-        }
-      ],
-      "id": 4
-    },
-    {
-      "userId": 4,
-      "date": "2023-10-22",
-      "intervals": [
-        {
-          "id": "1696722742986",
-          "start": "05:56",
-          "end": "07:58"
-        },
-        {
-          "id": "1696722782874",
-          "start": "07:58",
-          "end": "08:59"
-        }
-      ],
-      "id": 5
-    },
-    {
-      "userId": 4,
-      "date": null,
-      "intervals": [],
-      "id": 6
-    },
-    {
-      "userId": 4,
-      "date": "2023-10-29",
-      "intervals": [
-        {
-          "id": "1696723184989",
-          "start": "02:03",
-          "end": "08:59"
-        }
-      ],
-      "id": 7
-    },
-    {
-      "userId": 4,
-      "date": "2023-10-09",
-      "intervals": [
-        {
-          "start": "14:45",
-          "end": "15:45"
-        },
-        {
-          "start": "16:45",
-          "end": "17:45"
-        },
-        {
-          "start": "18:45",
-          "end": "19:45"
-        },
-        {
-          "start": "20:45",
-          "end": "21:45"
-        }
-      ],
-      "id": 8
+      "dateId": 2,
+      "start": "22:00",
+      "end": "23:00",
+      "isAvailable": false
     }
   ]
 }
