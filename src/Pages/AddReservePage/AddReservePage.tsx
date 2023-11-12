@@ -1,15 +1,12 @@
 import { Layout } from 'Widgets'
 import { FC } from 'react'
-import { Container } from '@mui/material'
-import { AddTimeInterval } from 'Features/AddTimeInterval'
-import s from './AddReservePage.module.scss'
+import { AddDateReservation } from 'Features/AddDateReservation'
+import styles from './AddReservePage.module.scss'
 
 const AddReservePage: FC = () => {
   return (
       <Layout>
-          <Container className={s.wrapper}>
-              <AddTimeInterval />
-          </Container>
+          <AddDateReservation className={styles.dateForm} />
       </Layout>
   )
 }

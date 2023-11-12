@@ -1,3 +1,3 @@
-import Layout from './ui/Layout/Layout'
+import { Layout } from './ui/Layout/Layout'
 
 export default Layout

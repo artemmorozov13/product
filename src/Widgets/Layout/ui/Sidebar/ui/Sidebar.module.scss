@@ -1,0 +1,24 @@
+.drawerHeader {
+    width: 240px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+
+    .toolbar {
+        justify-content: flex-end;
+    }
+}
+
+.drawer {
+    max-width: 240px;
+    flex-shrink: 0;
+
+    &.paper {
+        box-sizing: border-box;
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}

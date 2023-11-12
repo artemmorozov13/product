@@ -1,29 +1,33 @@
-import { FC, ReactNode } from 'react'
+import { FC, ReactNode, useState } from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import styles from './Layout.module.scss';
+import { Header } from '../Header';
+import { Sidebar } from '../Sidebar/ui/Sidebar';
+import { Container } from '@mui/material';
 
-import { Footer } from '../Footer'
-import { Header } from '../Header'
-import { Sidebar } from '../Sidebar'
-
-import s from './Layout.module.scss'
-import { useAuth } from 'Shared/lib/hooks/useAuth'
-
-interface ILayout {
+interface LayoutProps {
   children: ReactNode
 }
 
-const Layout: FC<ILayout> = ({ children }) => {
-  const isAuth = useAuth()
+export const Layout: FC<LayoutProps> = ({ children }) => {
+  const [open, setOpen] = useState(false);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
 
   return (
-      <div className={s.layout}>
-          <Header />
-          <div className={s.wrapper}>
-              {isAuth && <Sidebar />}
-              <main className={s.main}>{children}</main>
-          </div>
-          {/* <Footer /> */}
-      </div>
-  )
-}
-
-export default Layout
+    <div className={styles.layout}>
+      <CssBaseline />
+      <Header onOpen={handleDrawerOpen} />
+      <Sidebar open={open} onClose={handleDrawerClose} />
+      <Container>
+        {children}
+      </Container>
+    </div>
+  );
+};

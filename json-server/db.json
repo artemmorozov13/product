@@ -21,19 +21,42 @@
       "username": "art2000"
     }
   ],
+  "dates": [
+    {
+      "id": 1,
+      "userId": 4,
+      "date": "2023-10-13"
+    },
+    {
+      "id": 2,
+      "userId": 4,
+      "date": "2023-10-14"
+    }
+  ],
   "services": [
     {
       "id": 1,
-      "userId": "4",
-      "date": "2023-10-13",
-      "intervals": [
-        {
-          "start": "19:00",
-          "end": "20:00",
-          "isAvailable": true,
-          "reserverPhone": "123213123213"
-        }
-      ]
+      "userId": 4,
+      "dateId": 1,
+      "start": "22:03",
+      "end": "23:03",
+      "isAvailable": false
+    },
+    {
+      "id": 2,
+      "userId": 4,
+      "dateId": 1,
+      "start": "20:00",
+      "end": "21:00",
+      "isAvailable": false
+    },
+    {
+      "id": 3,
+      "userId": 4,
+      "dateId": 2,
+      "start": "22:00",
+      "end": "23:00",
+      "isAvailable": false
     }
   ]
 }
