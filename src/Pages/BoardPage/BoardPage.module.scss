@@ -1,0 +1,33 @@
+.board {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.paper {
+    margin-top: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}

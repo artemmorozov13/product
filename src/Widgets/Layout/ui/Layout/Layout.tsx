@@ -6,10 +6,11 @@ import { Sidebar } from '../Sidebar/ui/Sidebar';
 import { Container } from '@mui/material';
 
 interface LayoutProps {
+  className?: string
   children: ReactNode
 }
 
-export const Layout: FC<LayoutProps> = ({ children }) => {
+export const Layout: FC<LayoutProps> = ({ children, className }) => {
   const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
@@ -25,7 +26,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
       <CssBaseline />
       <Header onOpen={handleDrawerOpen} />
       <Sidebar open={open} onClose={handleDrawerClose} />
-      <Container>
+      <Container className={className}>
         {children}
       </Container>
     </div>

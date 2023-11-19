@@ -34,8 +34,8 @@ export const RoutesPath: Record<AppRoutes, string> = {
   [AppRoutes.BOARD]: '/board',
   [AppRoutes.RESERVATION]: '/reservations',
   [AppRoutes.BOARD_BY_ID]: '/board/', // + :id
-  [AppRoutes.SHARED_BOARD]: '/boards/', // + :userId
-  [AppRoutes.SHARED_BOARD_BY_ID]: '/boards/', // + :userId/service/:id
+  [AppRoutes.SHARED_BOARD]: '/shared/', // + :userId
+  [AppRoutes.SHARED_BOARD_BY_ID]: '/shared/user/', // + :userId/date/:dateId
 
   [AppRoutes.ADD_RESERVE]: '/reserve',
   [AppRoutes.NOT_FOUND]: '*'

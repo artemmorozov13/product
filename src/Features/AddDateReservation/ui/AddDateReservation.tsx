@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { Badge, Box, Button, Chip, Paper, Typography } from '@mui/material';
+import { Button, Chip, Paper, Typography } from '@mui/material';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider, TimePicker } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
@@ -120,7 +120,6 @@ export const AddDateReservation: FC<AddDateReservationProps> = (props) => {
 
   return (
     <div className={className}>
-      <LocalizationProvider dateAdapter={AdapterDateFns}>
         <Paper>
           <Typography variant='h3' className={styles.title}>Добавление даты записи</Typography>
           <div className={styles.datePicker}>
@@ -194,7 +193,6 @@ export const AddDateReservation: FC<AddDateReservationProps> = (props) => {
             </div>
           </Paper>
         )}
-      </LocalizationProvider>
     </div>
   );
 };

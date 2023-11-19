@@ -18,7 +18,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesWithAuthProps> = {
     element: <SharedBoard />
   },
   [AppRoutes.SHARED_BOARD_BY_ID]: {
-    path: RoutesPath.sharedBoardById + ':userId/service/:id',
+    path: RoutesPath.sharedBoardById + ':userId/date/:dateId',
     element: <SharedBoardByIdPage />
   },
 

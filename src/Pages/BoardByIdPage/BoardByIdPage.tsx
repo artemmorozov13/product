@@ -1,20 +1,17 @@
-import { Box, Button, Card, Paper, Typography } from "@mui/material"
-import { getUserId } from "Entities/User"
+import { Box, Button, Card, CardActions, CardContent, CardMedia, Container, Divider, Paper, Typography } from "@mui/material"
+import { ReservationCard } from "Features/ReservationCard"
 import { API } from "Shared/api/api"
-import { RoutesPath } from "Shared/config/RouterConfig/AppRoutes"
-import { Layout } from "Widgets"
+import { localeTimeString } from "Shared/lib/helpers"
+import { Layout, PageLoader } from "Widgets"
 import { FC, useEffect, useState } from "react"
-import { useSelector } from "react-redux"
-import { Link } from "react-router-dom"
 import { useParams } from "react-router-dom"
 
 const BoardByIdPage: FC = () => {
     const { id: dateId } = useParams()
 
-    const userId = useSelector(getUserId)
-
     const [data, setData] = useState([])
     const [error, setError] = useState(null)
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         (async () => {
@@ -28,24 +25,26 @@ const BoardByIdPage: FC = () => {
             setData(response.data)
         } catch (error) {
             setError(error.message)
+        } finally {
+            setIsLoading(false)
         }
         })()
     }, [])
 
+    if (isLoading) {
+        <PageLoader />
+    }
+
     return (
         <Layout>
-            <Paper sx={{ padding: 3, marginTop: 3, display: "flex", flexWrap: "wrap", gap: 3 }}>
-                {data.map(time => (
-                    <Card sx={{padding: 3}}>
-                        <Typography variant="body1">Запись</Typography>
-                        <Box sx={{ display: "flex", gap: 2 }}>
-                            <Typography variant="body1">{new Date(time.startTime).toLocaleTimeString("ru-RU")}</Typography>
-                            ===
-                            <Typography variant="body1">{new Date(time.endTime).toLocaleTimeString("ru-RU")}</Typography>
-                        </Box>
-                    </Card>
-                ))}
-          </Paper>
+            <Container sx={{ display: "flex", flexDirection: "column", marginTop: 3 }}>
+                <Typography variant="h1" sx={{ fontSize: 24 }}>Доступные карточки для записи</Typography>
+                <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap", marginTop: 3 }}>
+                    {data.map(time => (
+                        <ReservationCard key={time.id} card={time} />
+                    ))}
+                </Box>
+            </Container>
         </Layout>
     )
 }

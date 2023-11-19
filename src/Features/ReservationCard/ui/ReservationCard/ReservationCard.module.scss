@@ -1,0 +1,33 @@
+.card {
+    max-width: 275px;
+
+    &__title {
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__reservation {
+        padding: 16px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    &__actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1;
+
+        &_single {
+            grid-template-columns: 1fr;
+        }
+    }
+}

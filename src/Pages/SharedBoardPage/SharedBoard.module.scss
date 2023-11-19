@@ -1,5 +1,26 @@
+.board {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .title {
-    margin-top: 20px;
-    text-align: center;
-    font-size: var(--fs-huge);
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.paper {
+    margin-top: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
